@@ -1,0 +1,192 @@
+
+<div class="product-filter-wrapper text-center mb-5">
+    <ul class="post-filter list-unstyled">
+        <li class="active" data-filter=".domestic"><span>Domestic Products</span></li>
+        <li data-filter=".international"><span>International Export</span></li>
+    </ul>
+</div>
+
+<div class="products-container-custom">
+    
+        <div class="product-item-row domestic row align-items-center  mb-5" style="display: block;">
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-img">
+                    <img src="assets/images/services/service-v1-1.jpg" alt="General" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-content p-4">
+                    <h2 class="mb-3" style="color: #4a7c2c;">General</h2>
+                    <ul class="list-unstyled">
+        <li><i class='fas fa-check-circle me-2 text-success'></i> <strong>RICE</strong> (Type)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>JSR</strong> (STEAM)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>JSR</strong> (RAW)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>JSR</strong> (BROCKEN)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>HMT</strong> (STEAM)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>RNR</strong> (STEAM)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>RNR</strong> (RAW)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BPT</strong> (STEAM)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BPT</strong> (RAW)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BPT</strong> (BOILED)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>KNM</strong> (STEAM)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>KNM</strong> (BOILED)</li>
+                    </ul>
+                    <p class='mt-3'>Premium quality sourced directly from our verified farmer network, ensuring the highest standards of purity and taste.</p>
+                    <a href="contact.html" class="btn-one mt-3"><span class="txt">Enquire Now</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-item-row domestic row align-items-center flex-row-reverse mb-5" style="display: block;">
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-img">
+                    <img src="assets/images/services/service-v1-2.jpg" alt="MIDA" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-content p-4">
+                    <h2 class="mb-3" style="color: #4a7c2c;">MIDA</h2>
+                    <ul class="list-unstyled">
+        <li><i class='fas fa-check-circle me-2 text-success'></i> <strong>IDLY RAVVA</strong> (SOFT/MEDIUM)</li>
+                    </ul>
+                    <p class='mt-3'>Premium quality sourced directly from our verified farmer network, ensuring the highest standards of purity and taste.</p>
+                    <a href="contact.html" class="btn-one mt-3"><span class="txt">Enquire Now</span></a>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="product-item-row international row align-items-center  mb-5" style="display: none;">
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-img">
+                    <img src="assets/images/services/service-v1-1.jpg" alt="RICE" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-content p-4">
+                    <h2 class="mb-3" style="color: #4a7c2c;">RICE</h2>
+                    <ul class="list-unstyled">
+        <li><i class='fas fa-check-circle me-2 text-success'></i> <strong>IR64 RICE</strong> (BOILED)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>JAYA</strong> (BOILED)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>SUREKHA</strong> (BOILED)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>SONAMASOORI</strong> (BOILED)</li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>IDDLY RICE</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>KHAIMA/JEERA RICE</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>PONNI RIE</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BROKEN RICE 100%</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BASMATH 1121/1509</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>IDLI RAVVA</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>WHEET FLORE</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>MIDA</strong></li>
+                    </ul>
+                    <p class='mt-3'>Premium quality sourced directly from our verified farmer network, ensuring the highest standards of purity and taste.</p>
+                    <a href="contact.html" class="btn-one mt-3"><span class="txt">Enquire Now</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-item-row international row align-items-center flex-row-reverse mb-5" style="display: none;">
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-img">
+                    <img src="assets/images/services/service-v1-2.jpg" alt="WHOLE SPICES" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-content p-4">
+                    <h2 class="mb-3" style="color: #4a7c2c;">WHOLE SPICES</h2>
+                    <ul class="list-unstyled">
+        <li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CUMIN</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CORIANDER</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>FENNEL</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>GREEN CARDMOM</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BLACK PEPPER</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CLOVE</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CINNMON STICK</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>WHITE PEPPER</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>STAR ANISE</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>MUSTED</strong></li>
+                    </ul>
+                    <p class='mt-3'>Premium quality sourced directly from our verified farmer network, ensuring the highest standards of purity and taste.</p>
+                    <a href="contact.html" class="btn-one mt-3"><span class="txt">Enquire Now</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-item-row international row align-items-center  mb-5" style="display: none;">
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-img">
+                    <img src="assets/images/services/service-v1-1.jpg" alt="POWDERS" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-content p-4">
+                    <h2 class="mb-3" style="color: #4a7c2c;">POWDERS</h2>
+                    <ul class="list-unstyled">
+        <li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CUMIN</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CORIANDER</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>FENNEL</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>GINGER</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>RED CHILLI</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>TERMARIC</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>MORINGA</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CURRY LEAVES</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>TULSI</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CINNAMON</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BLACK PEPPER</strong></li>
+                    </ul>
+                    <p class='mt-3'>Premium quality sourced directly from our verified farmer network, ensuring the highest standards of purity and taste.</p>
+                    <a href="contact.html" class="btn-one mt-3"><span class="txt">Enquire Now</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-item-row international row align-items-center flex-row-reverse mb-5" style="display: none;">
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-img">
+                    <img src="assets/images/services/service-v1-2.jpg" alt="FRESH VEGITABLES" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-content p-4">
+                    <h2 class="mb-3" style="color: #4a7c2c;">FRESH VEGITABLES</h2>
+                    <ul class="list-unstyled">
+        <li><i class='fas fa-check-circle me-2 text-success'></i> <strong>ONION</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>POTATO</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>TOMATO</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>GREEN CHILLI</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>OKRA (LADY FINGER)</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>DRUMSTICK</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>GINGER</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>GARLIC</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>CURRY LEAVES</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>MINT</strong></li>
+                    </ul>
+                    <p class='mt-3'>Premium quality sourced directly from our verified farmer network, ensuring the highest standards of purity and taste.</p>
+                    <a href="contact.html" class="btn-one mt-3"><span class="txt">Enquire Now</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-item-row international row align-items-center  mb-5" style="display: none;">
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-img">
+                    <img src="assets/images/services/service-v1-1.jpg" alt="FRESH FRUITS" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="product-item-content p-4">
+                    <h2 class="mb-3" style="color: #4a7c2c;">FRESH FRUITS</h2>
+                    <ul class="list-unstyled">
+        <li><i class='fas fa-check-circle me-2 text-success'></i> <strong>MANGO</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>BANANA</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>GUVA</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>SWEET LIME</strong></li><li><i class='fas fa-check-circle me-2 text-success'></i> <strong>WATERMILON</strong></li>
+                    </ul>
+                    <p class='mt-3'>Premium quality sourced directly from our verified farmer network, ensuring the highest standards of purity and taste.</p>
+                    <a href="contact.html" class="btn-one mt-3"><span class="txt">Enquire Now</span></a>
+                </div>
+            </div>
+        </div>
+        
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.post-filter li');
+    const items = document.querySelectorAll('.product-item-row');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter').replace('.', '');
+            items.forEach(item => {
+                if (item.classList.contains(filter)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+
+<style>
+.product-item-row {
+    transition: all 0.5s ease;
+}
+.post-filter li {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #f4f4f4;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.post-filter li.active, .post-filter li:hover {
+    background: #4a7c2c;
+    color: #fff;
+}
+.product-item-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+.product-item-content li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse !important;
+}
+</style>
