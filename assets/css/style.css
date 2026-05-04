@@ -10068,3 +10068,42 @@ Modifier Css
 /*--------------------------------------------------
 # End Css 
 ----------------------------------------------------*/
+
+
+
+/* Custom Sri Varahi Agro overrides */
+.header-logo-box-style1 img {
+    height: 120px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain;
+}
+
+.sticky-logo-box-style1 img {
+    height: 90px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+    .main-menu.main-menu-style1 {
+        display: flex;
+        justify-content: center;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .main-menu-box .main-menu__list {
+        display: none !important;
+    }
+    .header-logo-box-style1 img {
+        height: 70px !important;
+    }
+}
+
+body {
+    overflow-x: hidden !important;
+}
