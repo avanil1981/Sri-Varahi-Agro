@@ -45,20 +45,44 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
-    <style>
-        .main-header-style1__content-bottom .main-header-style1__content-bottom-left {
-            display: flex !important;
-            align-items: center !important;
-            flex: 1 !important;
-        }
-        .main-menu.main-menu-style1 {
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-        .main-header-style1__content-bottom-right {
-            margin-left: 0 !important;
-        }
-    </style>
+      <style>
+          /* Improved Header Layout */
+          .main-header-style1__content-bottom {
+              min-height: 80px;
+              display: flex;
+              align-items: center;
+          }
+          .main-header-style1__content-bottom .main-header-style1__content-bottom-left {
+              display: flex !important;
+              align-items: center !important;
+              justify-content: space-between !important;
+              width: 100% !important;
+              flex: 1 !important;
+              padding-right: 24px !important;
+          }
+          .main-menu.main-menu-style1 {
+              margin-left: auto !important;
+              margin-right: 0 !important;
+          }
+          .main-header-style1__content-bottom-right {
+              margin-left: 0 !important;
+          }
+          
+          /* Hamburger Menu Styling */
+          .mobile-nav__toggler {
+              font-size: 26px !important;
+              color: #f1b333 !important;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+          }
+          .mobile-nav__toggler:hover {
+              transform: scale(1.1);
+              color: #d19a2b !important;
+          }
+      </style>
 </head>
 
 <body class="body-bg-1">

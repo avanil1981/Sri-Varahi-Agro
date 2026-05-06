@@ -10151,17 +10151,6 @@ html, body {
 }
 
 
-/* Absolute Mobile Hamburger Fix */
-@media (max-width: 1199px) {
-    .main-header-style1__content-bottom-left {
-        position: relative !important;
-    }
-    .mobile-nav__toggler {
-        position: absolute !important;
-        right: 30px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        margin: 0 !important;
-    }
-}
+
+
 
