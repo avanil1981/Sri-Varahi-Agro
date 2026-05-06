@@ -10107,3 +10107,21 @@ Modifier Css
 body {
     overflow-x: hidden !important;
 }
+
+/* Custom Footer Padding Overrides */
+.footer-main {
+    padding-top: 60px !important;
+    padding-bottom: 30px !important;
+}
+.single-footer-widget {
+    margin-bottom: 20px !important;
+}
+
+
+/* Custom Footer Logo Size Override */
+.footer-logo-style1 img {
+    max-width: 150px !important;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+
