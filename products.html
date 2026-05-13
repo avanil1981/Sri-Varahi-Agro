@@ -550,8 +550,62 @@
                 color: #666;
             }
 
-            @media (max-width: 991px) {
+            /* Product Type Toggle Styles */
+            .product-type-filter {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 50px;
+                padding-top: 30px;
+            }
 
+            .filter-btn {
+                padding: 14px 40px;
+                font-size: 16px;
+                font-weight: 700;
+                border-radius: 50px;
+                border: 2px solid #e5d8b0;
+                background: #fff;
+                color: #1a1a1a;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            }
+
+            .filter-btn i {
+                font-size: 18px;
+            }
+
+            .filter-btn.active {
+                background: #1a6b3a; /* Brand Green */
+                color: #fff;
+                border-color: #1a6b3a;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(26, 107, 58, 0.2);
+            }
+
+            .filter-btn:hover:not(.active) {
+                border-color: #1a6b3a;
+                color: #1a6b3a;
+            }
+
+            .product-section-container {
+                display: none;
+                opacity: 0;
+                transition: opacity 0.6s ease, transform 0.6s ease;
+                transform: translateY(15px);
+            }
+
+            .product-section-container.active {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            @media (max-width: 991px) {
                 .product-zigzag-row,
                 .product-zigzag-row.reverse {
                     flex-direction: column;
@@ -565,22 +619,41 @@
                 .product-zigzag-img img {
                     height: 260px;
                 }
+                
+                .product-type-filter {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                }
             }
         </style>
 
         <!-- ============================================================
              SECTION 1: DOMESTIC PRODUCTS
         ============================================================ -->
-        <section class="products-domestic">
-            <div class="container">
+        <!-- Product Category Filter -->
+        <div class="container">
+            <div class="product-type-filter">
+                <button class="filter-btn active" onclick="filterProducts('domestic', this)">
+                    <i class="fas fa-home"></i> Domestic Supply
+                </button>
+                <button class="filter-btn" onclick="filterProducts('international', this)">
+                    <i class="fas fa-globe-americas"></i> International Export
+                </button>
+            </div>
+        </div>
 
-                <div class="product-section-header">
-                    <span class="badge-label">🇮🇳 Domestic Supply</span>
-                    <h2>Domestic Products</h2>
-                    <p>Premium quality agro-commodities supplied across India — trusted by wholesalers, millers,
-                        distributors, and retailers nationwide.</p>
-                    <div class="section-divider"></div>
-                </div>
+        <div id="domestic-products" class="product-section-container active">
+            <section class="products-domestic">
+                <div class="container">
+
+                    <div class="product-section-header">
+                        <span class="badge-label">🇮🇳 Domestic Supply</span>
+                        <h2>Domestic Products</h2>
+                        <p>Premium quality agro-commodities supplied across India — trusted by wholesalers, millers,
+                            distributors, and retailers nationwide.</p>
+                        <div class="section-divider"></div>
+                    </div>
 
                 <!-- ---- DOMESTIC: RICE ---- -->
                 <h3 class="subcategory-heading"><i class="icon-wheat"></i> Rice Varieties</h3>
@@ -900,23 +973,20 @@
                 </div>
 
             </div>
-        </section>
-        <!-- END DOMESTIC SECTION -->
+            </div>
+        </div>
 
+        <div id="international-products" class="product-section-container">
+            <section class="products-international">
+                <div class="container">
 
-        <!-- ============================================================
-             SECTION 2: INTERNATIONAL EXPORT PRODUCTS
-        ============================================================ -->
-        <section class="products-international">
-            <div class="container">
-
-                <div class="product-section-header">
-                    <span class="badge-label">🌍 International Export</span>
-                    <h2>International Export Products</h2>
-                    <p>APEDA-registered, ISO-certified agro-commodities exported via Air &amp; Sea freight to 50+ global
-                        markets across the Middle East, Asia, Europe, and Africa.</p>
-                    <div class="section-divider"></div>
-                </div>
+                    <div class="product-section-header">
+                        <span class="badge-label">🌍 International Export</span>
+                        <h2>International Export Products</h2>
+                        <p>APEDA-registered, ISO-certified agro-commodities exported via Air &amp; Sea freight to 50+ global
+                            markets across the Middle East, Asia, Europe, and Africa.</p>
+                        <div class="section-divider"></div>
+                    </div>
 
                 <!-- ---- EXPORT: RICE ---- -->
                 <h3 class="subcategory-heading"><i class="icon-wheat"></i> Export Rice Varieties</h3>
@@ -1371,8 +1441,39 @@
                 </div>
 
             </div>
+            </div>
         </section>
-        <!-- END INTERNATIONAL SECTION -->
+        </div>
+
+        <script>
+            function filterProducts(type, btn) {
+                // Update Buttons
+                const buttons = document.querySelectorAll('.filter-btn');
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update Sections
+                const domestic = document.getElementById('domestic-products');
+                const international = document.getElementById('international-products');
+
+                if (type === 'domestic') {
+                    domestic.classList.add('active');
+                    international.classList.remove('active');
+                } else {
+                    domestic.classList.remove('active');
+                    international.classList.add('active');
+                }
+
+                // Trigger window resize to fix Owl Carousel layout issues in hidden containers
+                setTimeout(() => {
+                    window.dispatchEvent(new Event('resize'));
+                }, 100);
+                
+                // Scroll to filter section
+                const filterSection = document.querySelector('.product-type-filter');
+                filterSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        </script>
 
 
 
