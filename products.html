@@ -485,6 +485,27 @@
                 color: #c8a951;
             }
 
+            .product-zigzag-img .owl-carousel img {
+                height: 360px;
+                object-fit: cover;
+                width: 100%;
+            }
+            .product-zigzag-img .owl-dots {
+                position: absolute;
+                bottom: 15px;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+            .product-zigzag-img .owl-dots .owl-dot span {
+                background: rgba(255, 255, 255, 0.5);
+                width: 10px;
+                height: 10px;
+            }
+            .product-zigzag-img .owl-dots .owl-dot.active span {
+                background: #c8a951;
+            }
+
             @media (max-width: 991px) {
 
                 .product-zigzag-row,
@@ -523,8 +544,30 @@
                 <!-- ROW 1: Image Left | Text Right -->
                 <div class="product-zigzag-row">
                     <div class="product-zigzag-img">
-                        <img src="assets/images/products/domestic-jsr-rice.jpg" alt="JSR Rice">
-                        <span class="img-badge">Steam &amp; Raw</span>
+                        <!-- Image Slider for JSR Rice Types -->
+                        <div class="thm-owl__carousel owl-carousel owl-theme" data-owl-options='{
+                            "loop": true,
+                            "autoplay": true,
+                            "autoplayTimeout": 5000,
+                            "items": 1,
+                            "margin": 0,
+                            "nav": false,
+                            "dots": true,
+                            "smartSpeed": 1000
+                        }'>
+                            <div class="item">
+                                <img src="assets/images/products/jsr-steam-rice.png" alt="JSR Steam Rice">
+                                <span class="img-badge">JSR Steam Rice</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/products/jsr-raw-rice.png" alt="JSR Raw Rice">
+                                <span class="img-badge">JSR Raw Rice</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/products/jsr-broken-rice.png" alt="JSR Broken Rice">
+                                <span class="img-badge">JSR Broken Rice</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="product-zigzag-text">
                         <span class="cat-tag">Rice · Domestic</span>
