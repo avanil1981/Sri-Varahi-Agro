@@ -33,29 +33,103 @@
     --thm-font: "Albert Sans", sans-serif;
     --thm-font-2: "Parkinsans", sans-serif;
     --thm-font-3: "Lumanosimo", cursive;
-    --thm-primary-color: #f4ca4e;
-    --thm-primary-color-rgb: 244, 202, 78;
-    --thm-body-font-color: #69594c;
-    --thm-body-font-color-2: #b3a19d;
-    --thm-body-font-color-3: #ab948e;
+    /* Primary accent — Logo Orange */
+    --thm-primary-color: #e8831a;
+    --thm-primary-color-rgb: 232, 131, 26;
+    /* Body text — Olive/Dark Green */
+    --thm-body-font-color: #3d5a35;
+    --thm-body-font-color-2: #7a9a6a;
+    --thm-body-font-color-3: #8aaa78;
     --thm-body-font-size: 17px;
     --thm-body-line-height: 28px;
     --thm-body-font-weight: 400;
-    --thm-heading-font-color: #1a0e05;
+    /* Headings — Deep Forest Green */
+    --thm-heading-font-color: #1a3a1a;
     --thm-white: #ffffff;
-    --thm-black: #1a0e05;
-    --thm-black-bg: #4e342e;
-    --thm-black-bg-rgb: 78, 52, 46;
-    --thm-gray-bg: #f5f1e0;
-    --thm-gray-bg-rgb: 245, 241, 224;
-    --thm-gray-bg-2: #f7f3e5;
-    --thm-gray-bg-2-rgb: 247, 243, 229;
-    --thm-gray-bg-3: #ede8d5;
-    --thm-gray-bg-3-rgb: 237, 232, 213;
-    --thm-border-color: #4e342e;
-    --thm-border-color-1: #ede9d8;
-    --thm-border-color-2: #efe6e5;
+    --thm-black: #1a3a1a;
+    /* Dark backgrounds — Logo Forest Green */
+    --thm-black-bg: #1a6b3a;
+    --thm-black-bg-rgb: 26, 107, 58;
+    /* Section backgrounds — Light green-tinted */
+    --thm-gray-bg: #f0f6ed;
+    --thm-gray-bg-rgb: 240, 246, 237;
+    --thm-gray-bg-2: #f3f8f0;
+    --thm-gray-bg-2-rgb: 243, 248, 240;
+    --thm-gray-bg-3: #e4efe0;
+    --thm-gray-bg-3-rgb: 228, 239, 224;
+    /* Borders — Forest Green tones */
+    --thm-border-color: #1a6b3a;
+    --thm-border-color-1: #d0e8c8;
+    --thm-border-color-2: #cce4c4;
     --thm-border-radius: 10px;
+}
+
+
+/* =====================================================
+   Sri Varahi Agro Foods — Global Nav Bar Centering
+   Applies to ALL pages sitewide
+   Logo: Left | Nav Links: Center | Button: Right
+   ===================================================== */
+
+/* 1. Header bar: flex with relative positioning */
+.main-header-style1__content-bottom {
+    min-height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    padding: 18px 35px !important;
+}
+
+/* 2. Left side (logo wrapper) */
+.main-header-style1__content-bottom-left {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 !important;
+}
+
+/* 3. Nav links — absolutely centered in header */
+.main-menu.main-menu-style1 {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    z-index: 10;
+}
+
+/* 4. Nav list — single row, no wrap */
+.main-menu-style1 .main-menu__list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+}
+
+/* 5. Individual nav links — no text wrap */
+.main-menu-style1 .main-menu__list>li>a {
+    white-space: nowrap !important;
+}
+
+/* 6. Right side button — always on the right */
+.main-header-style1__content-bottom-right {
+    margin-left: auto !important;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* 7. Mobile nav sidebar logo — transparent PNG */
+.mobile-nav__logo img {
+    height: 70px !important;
+    width: auto !important;
+    object-fit: contain;
+}
+
+/* 8. Header logo size for transparent PNG */
+.header-logo-box-style1 a img {
+    height: 70px !important;
+    width: auto !important;
+    object-fit: contain;
 }
 
 
@@ -4118,7 +4192,7 @@ select:focus {
     position: absolute;
     right: 0px;
     top: 0px;
-    content: "0"counter(slides-num);
+    content: "0" counter(slides-num);
     display: inline-block;
     color: var(--thm-primary-color);
     font-size: 18px;
@@ -6530,7 +6604,7 @@ select:focus {
     position: absolute;
     right: 0px;
     top: 0px;
-    content: "0"counter(slides-num);
+    content: "0" counter(slides-num);
     display: inline-block;
     color: var(--thm-primary-color);
     font-size: 18px;
@@ -10099,6 +10173,7 @@ Modifier Css
     .main-menu-box .main-menu__list {
         display: none !important;
     }
+
     .header-logo-box-style1 img {
         height: 70px !important;
     }
@@ -10113,6 +10188,7 @@ body {
     padding-top: 60px !important;
     padding-bottom: 30px !important;
 }
+
 .single-footer-widget {
     margin-bottom: 20px !important;
 }
@@ -10135,22 +10211,21 @@ body {
         width: 100% !important;
         padding-right: 20px !important;
     }
+
     .main-menu.main-menu-style1 {
         margin-left: auto !important;
     }
 }
 
 /* Mobile Horizontal Scroll Fix */
-html, body {
+html,
+body {
     overflow-x: hidden !important;
     max-width: 100vw;
 }
-.footer-widget-contact-info a, .footer-widget-contact-info p {
+
+.footer-widget-contact-info a,
+.footer-widget-contact-info p {
     word-break: break-word;
     white-space: normal;
 }
-
-
-
-
-
