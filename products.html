@@ -288,10 +288,89 @@
         </section>
         <!--End breadcrumb Style1-->
 
+        <!-- Continuous Scrolling Product Ticker -->
+        <div class="product-ticker-section">
+            <div class="product-ticker-container">
+                <!-- Duplicate for seamless loop -->
+                <div class="product-ticker-item"><div class="dot"></div>Premium Basmati Rice</div>
+                <div class="product-ticker-item"><div class="dot"></div>Sona Masoori Rice</div>
+                <div class="product-ticker-item"><div class="dot"></div>Guntur Red Chilli</div>
+                <div class="product-ticker-item"><div class="dot"></div>Teja Red Chilli</div>
+                <div class="product-ticker-item"><div class="dot"></div>Arabica Coffee Beans</div>
+                <div class="product-ticker-item"><div class="dot"></div>Robusta Coffee Beans</div>
+                <div class="product-ticker-item"><div class="dot"></div>Fresh Red Onions</div>
+                <div class="product-ticker-item"><div class="dot"></div>Fresh Green Chillies</div>
+                <div class="product-ticker-item"><div class="dot"></div>Whole Spices</div>
+                <div class="product-ticker-item"><div class="dot"></div>Spice Powders</div>
+                <div class="product-ticker-item"><div class="dot"></div>Premium Pomegranates</div>
+                <div class="product-ticker-item"><div class="dot"></div>Export Grade Mangoes</div>
+                
+                <!-- Repeat for loop -->
+                <div class="product-ticker-item"><div class="dot"></div>Premium Basmati Rice</div>
+                <div class="product-ticker-item"><div class="dot"></div>Sona Masoori Rice</div>
+                <div class="product-ticker-item"><div class="dot"></div>Guntur Red Chilli</div>
+                <div class="product-ticker-item"><div class="dot"></div>Teja Red Chilli</div>
+                <div class="product-ticker-item"><div class="dot"></div>Arabica Coffee Beans</div>
+                <div class="product-ticker-item"><div class="dot"></div>Robusta Coffee Beans</div>
+                <div class="product-ticker-item"><div class="dot"></div>Fresh Red Onions</div>
+                <div class="product-ticker-item"><div class="dot"></div>Fresh Green Chillies</div>
+                <div class="product-ticker-item"><div class="dot"></div>Whole Spices</div>
+                <div class="product-ticker-item"><div class="dot"></div>Spice Powders</div>
+                <div class="product-ticker-item"><div class="dot"></div>Premium Pomegranates</div>
+                <div class="product-ticker-item"><div class="dot"></div>Export Grade Mangoes</div>
+            </div>
+        </div>
+
         <!-- ============================================================
              CUSTOM PRODUCT PAGE STYLES
         ============================================================ -->
         <style>
+            /* Product Ticker Styles */
+            .product-ticker-section {
+                background: #1a6b3a; /* Brand Green */
+                padding: 15px 0;
+                overflow: hidden;
+                white-space: nowrap;
+                position: relative;
+                border-top: 2px solid #e8831a; /* Brand Orange accent */
+                border-bottom: 2px solid #e8831a;
+                z-index: 100;
+            }
+
+            .product-ticker-container {
+                display: flex;
+                width: max-content;
+                animation: marquee 40s linear infinite;
+            }
+
+            .product-ticker-item {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                padding: 0 40px;
+            }
+
+            .product-ticker-item .dot {
+                width: 8px;
+                height: 8px;
+                background: #e8831a;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+
+            .product-ticker-section:hover .product-ticker-container {
+                animation-play-state: paused;
+            }
+
             /* Section Divider */
             .product-section-header {
                 text-align: center;
