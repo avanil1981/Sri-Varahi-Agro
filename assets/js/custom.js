@@ -765,7 +765,9 @@
       }
 
       if ($(this).next('.acc-content').is(':visible')) {
-        return false;
+        $(this).removeClass('active');
+        $(this).next('.acc-content').slideUp(300);
+        target.removeClass('active-block');
       } else {
         $(this).addClass('active');
         $(outerBox).children('.accordion').removeClass('active-block');
