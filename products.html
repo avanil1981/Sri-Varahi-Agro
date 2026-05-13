@@ -506,6 +506,50 @@
                 background: #c8a951;
             }
 
+            /* Compact Accordion Styling for Products */
+            .product-zigzag-text .accordion-box {
+                margin-top: 25px;
+            }
+            .product-zigzag-text .accordion {
+                border-bottom: 1px solid #f0f0f0;
+                margin-bottom: 0;
+            }
+            .product-zigzag-text .acc-btn {
+                padding: 12px 0;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                transition: all 0.3s;
+            }
+            .product-zigzag-text .acc-btn h5 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #333;
+                margin: 0;
+            }
+            .product-zigzag-text .acc-btn .icon-outer {
+                font-size: 14px;
+                color: #e8831a; /* Brand Orange */
+                transition: transform 0.3s;
+            }
+            .product-zigzag-text .acc-btn.active .icon-outer {
+                transform: rotate(90deg);
+            }
+            .product-zigzag-text .acc-content {
+                display: none;
+                padding-bottom: 15px;
+            }
+            .product-zigzag-text .acc-content.current {
+                display: block;
+            }
+            .product-zigzag-text .acc-content p {
+                font-size: 14px;
+                margin: 0;
+                line-height: 1.6;
+                color: #666;
+            }
+
             @media (max-width: 991px) {
 
                 .product-zigzag-row,
@@ -578,11 +622,45 @@
                             Ideal for daily consumption, hotel industry bulk supply, and rice flour milling
                             applications. We supply both polished and semi-polished varieties with FSSAI-compliant
                             packaging.</p>
-                        <ul class="variety-list">
-                            <li>JSR Steam</li>
-                            <li>JSR Raw</li>
-                            <li>JSR Broken</li>
-                        </ul>
+                        <!-- Rice Variety Explanations (Accordion) -->
+                        <div class="accordion-box mt-4">
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn active">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>JSR Steam Rice</h5>
+                                </div>
+                                <div class="acc-content current">
+                                    <div class="inner">
+                                        <p>Steam-processed to lock in nutrients and ensure grains remain non-sticky, firm, and fluffy after cooking. This variety is highly preferred by the hotel and catering industry for its superior volume expansion and consistent quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>JSR Raw Rice</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>Natural, un-steamed grains that offer the purest taste and authentic aroma. JSR Raw is a staple in households for daily consumption, prized for its natural texture and ease of digestion.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>JSR Broken Rice</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>High-quality broken grains that maintain the same nutritional value and taste as whole grains at an economical price point. Ideal for idly/dosa batter, traditional rice flour, and industrial food processing applications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a class="enquire-btn" href="contact.html"><i class="icon-arrow"></i> Enquire Now</a>
                     </div>
                 </div>
