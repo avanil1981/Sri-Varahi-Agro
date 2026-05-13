@@ -243,8 +243,9 @@
 
 .main-slider-style1__content-right-text p {
     color: var(--thm-black);
-    font-size: 19px;
-    line-height: 30px;
+    font-size: 17px;
+    line-height: 28px;
+    padding: 0 40px;
 }
 
 .main-slider-style1__content-right-btn {
