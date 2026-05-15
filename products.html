@@ -86,6 +86,154 @@
             transform: scale(1.1);
             color: #d19a2b !important;
         }
+
+        /* Rich & Royal Preloader Styles */
+        html { background-color: #0d1f16 !important; }
+
+        .loader-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0d1f16 !important; /* Solid Dark Green to hide content */
+            background: radial-gradient(circle at center, #1a3c2a 0%, #0d1f16 100%) !important;
+            z-index: 999999 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .handle-preloader {
+            background: transparent !important;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preloader-particles {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(200, 169, 81, 0.15) 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(200, 169, 81, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            animation: drift 20s linear infinite;
+        }
+
+        .animation-preloader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .preloader-pulse {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(200, 169, 81, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse-breathing 4s ease-in-out infinite;
+        }
+
+        .preloader-orbit, .preloader-orbit-2 {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(200, 169, 81, 0.1);
+        }
+
+        .preloader-orbit {
+            width: 320px;
+            height: 320px;
+            border-top: 3px solid #c8a951;
+            box-shadow: 0 0 25px rgba(200, 169, 81, 0.3);
+            animation: orbit-spin 2s linear infinite;
+        }
+
+        .preloader-orbit-2 {
+            width: 260px;
+            height: 260px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            animation: orbit-spin-reverse 3s linear infinite;
+        }
+
+        .preloader-logo {
+            width: 190px;
+            height: 190px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            padding: 25px;
+            object-fit: contain;
+            z-index: 2;
+            border: 2px solid #c8a951;
+            animation: logo-royal-float 4s ease-in-out infinite;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(200, 169, 81, 0.2);
+        }
+
+        .preloader-text {
+            margin-top: 60px;
+            color: #e5d8b0;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            text-align: center;
+            background: linear-gradient(90deg, #c8a951, #ffffff, #c8a951);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 2.5s linear infinite, tracking-in 3s ease-out forwards;
+        }
+
+        @keyframes drift {
+            from { background-position: 0 0; }
+            to { background-position: 500px 1000px; }
+        }
+
+        @keyframes pulse-breathing {
+            0%, 100% { transform: scale(0.8); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        }
+
+        @keyframes orbit-spin-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        @keyframes tracking-in {
+            from { letter-spacing: 2px; opacity: 0; }
+            to { letter-spacing: 8px; opacity: 1; }
+        }
+
+        @keyframes logo-royal-float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
+        }
+
+        @keyframes orbit-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        /* Disable sliding layers for a cleaner brand intro */
+        .loader-wrap .layer, 
+        .loader-wrap .layer-one, 
+        .loader-wrap .layer-two, 
+        .loader-wrap .layer-three {
+            display: none !important;
+        }
+
     </style>
 </head>
 
@@ -95,17 +243,13 @@
     <div class="loader-wrap">
         <div class="preloader">
             <div id="handle-preloader" class="handle-preloader">
-                <div class="layer layer-one">
-                    <span class="overlay"></span>
-                </div>
-                <div class="layer layer-three">
-                    <span class="overlay"></span>
-                </div>
-                <div class="layer layer-two">
-                    <span class="overlay"></span>
-                </div>
+                <div class="preloader-particles"></div>
                 <div class="animation-preloader">
-                    <div class="spinner"></div>
+                    <div class="preloader-pulse"></div>
+                    <div class="preloader-orbit"></div>
+                    <div class="preloader-orbit-2"></div>
+                    <img src="assets/images/resources/logo.png" alt="Sri Varahi Agro Foods" class="preloader-logo">
+                    <div class="preloader-text">Welcome to Sri Varahi Agro Foods</div>
                 </div>
             </div>
         </div>
@@ -1101,6 +1245,7 @@
                         <!-- Sub-Category Jump Links for International -->
                         <div class="product-category-nav">
                             <a href="#rice-section" class="cat-link">Rice</a>
+                            <a href="#flours-section" class="cat-link">Flours</a>
                             <a href="#whole-spices-section" class="cat-link">Whole Spices</a>
                             <a href="#spice-powders-section" class="cat-link">Spice Powders</a>
                             <a href="#vegetables-section" class="cat-link">Vegetables</a>
@@ -1136,6 +1281,10 @@
                             <div class="item">
                                 <img src="assets/images/products/export-sona-masoori-rice.png" alt="Sona Masoori Export Rice">
                                 <span class="img-badge">Sona Masoori Export</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/products/export-surekha-rice.png" alt="Surekha Export Rice">
+                                <span class="img-badge">Surekha Export Grade</span>
                             </div>
                         </div>
                     </div>
@@ -1182,6 +1331,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>Surekha Export Rice (Boiled)</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>Surekha Rice is a premium medium-grain variety, specifically parboiled to ensure that it retains its firm, non-sticky texture even after prolonged cooking. It is a preferred choice for commercial food service providers and catering companies in international markets, particularly in the Middle East, due to its excellent shelf-life and volume expansion. Our export-grade Surekha rice is sourced from verified agricultural clusters and is processed using advanced milling technology to ensure a uniform grain size and zero impurities, meeting the strict quality standards required for global B2B trade.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <a class="enquire-btn" href="contact.html"><i class="icon-arrow"></i> Request a Quote</a>
@@ -1213,6 +1374,14 @@
                             <div class="item">
                                 <img src="assets/images/products/export-idli-rice.png" alt="Export Idli Rice">
                                 <span class="img-badge">Idli Rice Export</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/products/export-khaima-rice.png" alt="Khaima Jeera Rice">
+                                <span class="img-badge">Khaima / Jeera Rice</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/products/export-broken-rice.png" alt="100% Broken Rice">
+                                <span class="img-badge">100% Broken Rice</span>
                             </div>
                         </div>
                     </div>
@@ -1256,6 +1425,110 @@
                                 <div class="acc-content">
                                     <div class="inner">
                                         <p>Our specialized Idli Rice is specifically processed through a controlled parboiling and drying cycle to achieve the exact starch profile required for the perfect fermentation of South Indian idli and dosa batters. We supply this variety to international food manufacturers, restaurants, and retail distributors in Gulf countries and Western markets where the demand for authentic Indian breakfast staples is rapidly growing. The grains are short, bold, and creamy white, ensuring that the resulting batter is smooth, aerated, and capable of producing the softest, fluffiest idlies possible. By implementing multi-stage grading and rigorous moisture control, we ensure that our Idli Rice provides consistent results every time, helping our global partners maintain the highest standards of culinary authenticity in their local markets.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>Khaima / Jeera Rice (Short Grain Aromatic)</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>Our Khaima Rice, also known as Jeera Rice or Jeerakasala, is a premium short-grain aromatic variety sourced from the traditional growing regions of Kerala and Karnataka. It is world-renowned for its unique, tiny grain size and intense buttery fragrance, making it the indispensable choice for authentic Malabar Biryanis and Ghee Rice. We ensure that our Khaima rice is aged naturally to enhance its aromatic profile and ensure that the grains remain separate and non-sticky after cooking. Every batch is meticulously cleaned and sorted, providing a high-grade product that meets the specific demands of the luxury culinary market and the South Asian diaspora worldwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>100% Broken Rice (Industrial Grade)</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>We export high-quality 100% Broken Rice, which is a cost-effective and versatile commodity for various industrial and food-processing applications globally. Despite being broken grains, our product is thoroughly cleaned, destoned, and sorted to ensure that it is free from dust, husks, or any foreign matter. It is highly valued in the international market as a raw material for producing rice flour, bird feed, pet food, and in the brewing and distilling industries. Our 100% broken rice provides the same nutritional value as whole grain rice but at a more accessible price point, making it a reliable choice for bulk industrial importers and manufacturers worldwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="enquire-btn" href="contact.html"><i class="icon-arrow"></i> Request a Quote</a>
+                    </div>
+                </div>
+                
+                <!-- ---- EXPORT: PROCESSED GRAINS & FLOURS ---- -->
+                <h3 id="flours-section" class="subcategory-heading"><i class="icon-wheat"></i> Processed Grains &amp; Flours</h3>
+
+                <!-- ROW 3: Image Left | Text Right -->
+                <div class="product-zigzag-row">
+                    <div class="product-zigzag-img">
+                         <!-- Image Slider for Flours -->
+                         <div class="thm-owl__carousel owl-carousel owl-theme" data-owl-options='{
+                            "loop": true,
+                            "autoplay": true,
+                            "autoplayTimeout": 5000,
+                            "items": 1,
+                            "margin": 0,
+                            "nav": false,
+                            "dots": true,
+                            "smartSpeed": 1000
+                        }'>
+                            <div class="item">
+                                <img src="assets/images/products/export-wheat-flour.png" alt="Premium Wheat Flour">
+                                <span class="img-badge">Premium Wheat Flour (Atta)</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/products/export-maida-flour.png" alt="Refined Wheat Flour Maida">
+                                <span class="img-badge">Refined Flour (Maida)</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/products/export-idli-ravva.png" alt="Idli Ravva Premium">
+                                <span class="img-badge">Premium Idli Ravva</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-zigzag-text">
+                        <span class="cat-tag">Flours &amp; Grains · International Export</span>
+                        <h3>Premium Wheat Flour, Maida &amp; Idli Ravva</h3>
+                        <p>We provide a comprehensive range of premium flours and processed grain products, specifically milled to meet the diverse needs of international bakeries, food manufacturers, and retail distributors. Our Wheat Flour (Atta) and Maida (Refined Flour) are sourced from high-protein wheat clusters in North India, ensuring superior elasticity and consistent quality for bread, pastries, and traditional flatbreads. Our specialized Idli Ravva is a coarse, parboiled semolina produced through a precise grinding process that ensures the perfect texture for authentic South Indian breakfast preparations. Each product is meticulously tested for gluten content, moisture levels, and fineness, ensuring that our global partners receive a reliable, high-yield ingredient that performs consistently in both artisanal and industrial food production environments.</p>
+                        
+                         <!-- Flour Variety Explanations (Accordion) -->
+                         <div class="accordion-box mt-4">
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>Premium Wheat Flour (Chakki Atta)</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>Our export-grade Wheat Flour (Chakki Atta) is produced from premium-quality wheat grains, ground using traditional stone-milling techniques that preserve the natural bran, germ, and endosperm. This ensures that the flour is rich in dietary fiber and nutrients while maintaining a superior taste and soft texture that is ideal for making traditional rotis and chapattis. We maintain strict control over the moisture content and granulation to ensure a long shelf-life and consistent performance for our international retail and distribution partners.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>Refined Wheat Flour (Maida)</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>We export high-grade Maida (Refined Wheat Flour), specifically processed for its high gluten strength and extra-fine texture, making it the preferred choice for international bakeries and confectionery manufacturers. Our Maida is meticulously sifted and tested to ensure zero impurities and a consistent protein profile, providing the necessary elasticity and volume expansion for a wide range of products, from fluffy breads and pastries to authentic South Asian savories. Our packaging is designed to protect the flour from moisture and contamination during long-distance transit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Block -->
+                            <div class="accordion">
+                                <div class="acc-btn">
+                                    <div class="icon-outer"><i class="icon-arrow"></i></div>
+                                    <h5>Premium Idli Ravva (Rice Semolina)</h5>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="inner">
+                                        <p>Our specialized Idli Ravva is a coarse, parboiled rice semolina that is essential for creating the authentic, grainy texture of traditional South Indian idlis. We use only premium parboiled rice, which is carefully ground and graded to ensure a uniform particle size that absorbs moisture evenly during batter preparation. This results in idlis that are exceptionally soft, fluffy, and authentic in every way. Our Idli Ravva is highly demanded by the global South Asian diaspora and food service providers looking to maintain the highest standards of culinary tradition abroad.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1307,19 +1580,19 @@
                                 <span class="img-badge">Mustard Seeds (Yellow &amp; Brown)</span>
                             </div>
                             <div class="item">
-                                <img src="assets/images/products/export-whole-spices.jpg" alt="Premium Coriander Seeds">
+                                <img src="assets/images/products/spice-coriander-seeds.png" alt="Premium Coriander Seeds">
                                 <span class="img-badge">Coriander Seeds</span>
                             </div>
                             <div class="item">
-                                <img src="assets/images/products/export-whole-spices.jpg" alt="Premium Fennel Seeds">
+                                <img src="assets/images/products/spice-fennel-seeds.png" alt="Premium Fennel Seeds">
                                 <span class="img-badge">Fennel Seeds (Saunf)</span>
                             </div>
                             <div class="item">
-                                <img src="assets/images/products/export-whole-spices.jpg" alt="Whole Cloves">
+                                <img src="assets/images/products/spice-cloves.png" alt="Whole Cloves">
                                 <span class="img-badge">Cloves (Laung)</span>
                             </div>
                             <div class="item">
-                                <img src="assets/images/products/export-whole-spices.jpg" alt="Cinnamon Sticks">
+                                <img src="assets/images/products/spice-cinnamon-sticks.png" alt="Cinnamon Sticks">
                                 <span class="img-badge">Cinnamon Sticks</span>
                             </div>
                         </div>

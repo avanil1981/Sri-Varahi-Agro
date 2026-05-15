@@ -24,13 +24,8 @@
   --------------------------------------------------------------*/
   function handlePreloader() {
     if ($('.loader-wrap').length) {
-      $('.loader-wrap').delay(1000).fadeOut(1000);
+      $('.loader-wrap').delay(2000).fadeOut(1000);
     }
-    TweenMax.to($(".loader-wrap .overlay"), 1.2, {
-      force3D: true,
-      left: "100%",
-      ease: Expo.easeInOut,
-    });
   }
 
 
